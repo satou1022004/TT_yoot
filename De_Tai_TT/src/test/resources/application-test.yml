@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:fooddelivery_test;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+  main:
+    allow-bean-definition-overriding: true
+
+app:
+  jwt:
+    secret: "Zm9vZC1kZWxpdmVyeS1zdXBlci1zZWNyZXQtand0LWtleS1mb3ItY2xhc3Nyb29tLWRlbW8tMzItYnl0ZXM="
+    expiration-minutes: 60
+  seed:
+    enabled: false

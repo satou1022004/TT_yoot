@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: online-food-delivery
+  datasource:
+    url: jdbc:postgresql://localhost:5433/fooddelivery
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+server:
+  port: 8080
+
+app:
+  jwt:
+    secret: "Zm9vZC1kZWxpdmVyeS1zdXBlci1zZWNyZXQtand0LWtleS1mb3ItY2xhc3Nyb29tLWRlbW8tMzItYnl0ZXM="
+    expiration-minutes: 1440
+  seed:
+    enabled: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
